@@ -8,8 +8,8 @@
 Servo tiltServo;
 Servo orientationServo;
 
-const int TILT_PIN = 8;         // PWM pin for tilt servo
-const int ORIENTATION_PIN = 9;  // PWM pin for orientation servo
+const int ORIENTATION_PIN = 8;  // PWM pin for orientation servo
+const int TILT_PIN = 9;         // PWM pin for tilt servo
 
 void setup() {
   tiltServo.attach(TILT_PIN);
@@ -23,7 +23,7 @@ void loop() {
   for (int i = 0; i < 3; i++) {           // Loop over orientation angles
     for (int j = 0; j < 3; j++) {         // Loop over tilt angles
       orientationServo.write(orientationAngles[i]);
-      tiltServo.write(tiltAngles[j]);
+      //tiltServo.write(tiltAngles[j]);
       delay(5000); // Wait for 5 seconds
     }
   }
